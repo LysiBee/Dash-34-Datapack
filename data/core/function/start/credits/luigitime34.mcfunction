@@ -1,0 +1,2 @@
+tellraw @a ["",{"text":"L","color":"#00ff00"},{"text":"u","color":"#07ff30"},{"text":"i","color":"#66ffaa"},{"text":"g","color":"#99ffee"},{"text":"i","color":"#66ccff"},{"text":"T","color":"#3399ff"},{"text":"i","color":"#3377ff"},{"text":"m","color":"#3355cc"},{"text":"e","color":"#3355cc"},{"text":"3","color":"#3355cc"},{"text":"4","color":"#3355cc"}]
+tellraw @a {"text":"-----------------------\n- Initial Map Creator\n- Datapack Maker\n- Lover of Luigi\n-----------------------","color":"blue"}

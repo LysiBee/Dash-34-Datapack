@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:chiseled_tuff"
+    },
+    "title": "You Had One Job...",
+    "description": "Complete the escape room in over 15 minutes",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "core:escape/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "impossible"
+    ]
+  ],
+  "rewards":
+  {
+    "function": "core:anti_challenge_complete"
+  }
+}

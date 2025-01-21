@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "right_click": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                            "items": "minecraft:firework_rocket"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "right_click"
+        ]
+    ],
+    "rewards": {
+        "function": "core:defense/towers/firework_detect"
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+    "id": "minecraft:infested_stone"
+    },
+    "title": "Silverfish",
+    "description": "Health: 10\nSpeed: 0.9 BPS\nAbility: Randomly burrows into the ground.  When burrowed its still, cant be attacked, but gets regen.",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "parent": "core:defense/mobs/blaze",
+  "criteria": {
+    "impossible": {
+    "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+    "impossible"
+    ]
+  ]
+  }

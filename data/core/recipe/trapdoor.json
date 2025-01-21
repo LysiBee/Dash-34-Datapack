@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "wooden_trapdoor",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": [
+      "minecraft:oak_planks"
+    ]
+  },
+  "result": {
+    "id": "minecraft:oak_trapdoor",
+    "count": 1,
+    "components": {
+      "minecraft:can_place_on": {
+        "predicates": [
+          {
+            "blocks": "minecraft:chiseled_tuff"
+          }
+        ],
+        "show_in_tooltip": true
+      }
+    }
+  }
+}

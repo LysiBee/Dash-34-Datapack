@@ -1,0 +1,1 @@
+execute as @e[tag=parkour-checkpoint] at @s run setblock ~ ~ ~ minecraft:polished_blackstone_pressure_plate

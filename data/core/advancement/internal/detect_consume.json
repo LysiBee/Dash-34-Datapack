@@ -1,0 +1,22 @@
+{
+    "criteria": {
+        "right_click": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": {"right_click":"true"}
+                    }
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "right_click"
+        ]
+    ],
+    "rewards": {
+        "function": "core:fight/items/triggers/set_delay"
+    }
+}

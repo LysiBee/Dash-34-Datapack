@@ -1,0 +1,48 @@
+give @s music_disc_11[consumable={ \
+    animation:"drink", \
+    consume_seconds:0.4f, \
+    has_consume_particles:0b, \
+    on_consume_effects:[{ \
+        sound:"minecraft:block.beacon.power_select", \
+        type:"minecraft:play_sound" \
+    }], \
+    sound:"minecraft:block.beacon.activate" \
+}, \
+custom_name='{ \
+    "text":"Greatsword" \
+}', \
+item_model="minecraft:iron_sword", \
+use_cooldown={ \
+    cooldown_group:"core:items/great", \
+    seconds:15f \
+}, \
+custom_data={ \
+    "right_click":"true", \
+    name:"great", \
+    weapon_id:7 \
+}, \
+attribute_modifiers={ \
+    modifiers:[{ \
+        type:attack_damage, \
+        amount:12, \
+        slot:mainhand, \
+        id:"minecraft:base_attack_damage", \
+        operation:add_value \
+    }, \
+    { \
+        type:attack_speed, \
+        amount:-3.6, \
+        slot:mainhand, \
+        id:"minecraft:base_attack_speed", \
+        operation:add_value \
+    }, \
+    { \
+        type:movement_speed, \
+        amount:-0.022, \
+        slot:mainhand, \
+        id:great_speed, \
+        operation:add_value \
+    }] \
+}, \
+!jukebox_playable, \
+rarity="rare"]

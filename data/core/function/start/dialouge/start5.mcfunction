@@ -1,0 +1,1 @@
+tellraw @a {"text": "So, are you ready to put your mind to the test? Let's get started! The room ahead is waiting for you. Good luck, and let's see how far you can push your mind!","color": "green"}

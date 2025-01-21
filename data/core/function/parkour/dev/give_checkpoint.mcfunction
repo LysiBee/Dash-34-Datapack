@@ -1,0 +1,1 @@
+give @s frog_spawn_egg[entity_data={id:"minecraft:marker",Tags:["parkour-checkpoint"]},item_name='"Place Checkpoint"'] 1

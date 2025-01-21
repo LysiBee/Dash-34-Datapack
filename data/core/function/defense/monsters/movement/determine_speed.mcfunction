@@ -1,0 +1,2 @@
+execute if score @s defense.speed matches ..300 store result storage core:mob_speed speed float 0.001 run scoreboard players get @s defense.speed
+execute if score @s defense.speed matches ..300 run function core:defense/monsters/movement/move with storage core:mob_speed

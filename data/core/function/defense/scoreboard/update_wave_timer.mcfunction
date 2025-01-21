@@ -1,0 +1,1 @@
+$scoreboard players display name $wave_timer defense.display ["",{"text":"Time until next wave: ","color":"blue"},{"text":"$(wave_timer)","color":"aqua","bold":true}]

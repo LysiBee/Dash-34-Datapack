@@ -1,0 +1,9 @@
+execute as @e[tag=random-block-marker10,limit=1,sort=random,tag=!placed-block] at @s run function core:memory/random/place_block {"block":"mud"}
+execute as @e[tag=random-block-marker10,limit=1,sort=random,tag=!placed-block] at @s run function core:memory/random/place_block {"block":"dirt"}
+execute as @e[tag=random-block-marker10,limit=1,sort=random,tag=!placed-block] at @s run function core:memory/random/place_block {"block":"podzol"}
+execute as @e[tag=random-block-marker10,limit=1,sort=random,tag=!placed-block] at @s run function core:memory/random/place_block {"block":"dirt_path"}
+execute as @e[tag=random-block-marker10,limit=1,sort=random,tag=!placed-block] at @s run function core:memory/random/place_block {"block":"coarse_dirt"}
+execute as @e[tag=random-block-marker10,limit=1,sort=random,tag=!placed-block] at @s run function core:memory/random/place_block {"block":"grass_block"}
+execute as @e[tag=random-block-marker10,limit=1,sort=random,tag=!placed-block] at @s run function core:memory/random/place_block {"block":"mycelium"}
+execute as @e[tag=random-block-marker10,limit=1,sort=random,tag=!placed-block] at @s run function core:memory/random/place_block {"block":"muddy_mangrove_roots"}
+execute as @e[tag=random-block-marker10,limit=1,sort=random,tag=!placed-block] at @s run function core:memory/random/place_block {"block":"rooted_dirt"}

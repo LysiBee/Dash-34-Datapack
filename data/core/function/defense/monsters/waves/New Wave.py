@@ -1,0 +1,13 @@
+wave_number = input("What wave is this? ")
+mob_number = int(input("How many mobs will this wave have? "))
+mobs = []
+for i in range(mob_number):
+    mobs.append(input("Which Mob? "))
+
+f = open(f'Core Datapack\\data\\core\\function\\defense\\monsters\\waves\\wave{wave_number}.mcfunction','a')
+for i in range(len(mobs)):
+    f.write(f"execute if score $wave_track defense.wave matches {i+1} run function core:defense/monsters/summon/{mobs[i]}\n")
+f.write(f'execute if score $wave_track defense.wave matches 1..{len(mobs)-1} run schedule function core:defense/monsters/waves/wave{wave_number} 3s')
+f.write(f'\nexecute if score $wave_track defense.wave matches 1..{len(mobs)-1} run scoreboard players add $wave_track defense.wave 1')
+f.write(f'\nschedule function core:defense/monsters/waves/end_of_wave {len(mobs)*3 + 30}s')
+f.close()

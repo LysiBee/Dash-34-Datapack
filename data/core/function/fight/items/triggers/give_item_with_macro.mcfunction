@@ -1,0 +1,1 @@
+$function core:fight/items/triggers/give_item_back with storage core:$(name)

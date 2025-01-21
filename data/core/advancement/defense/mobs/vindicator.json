@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+    "id": "minecraft:iron_axe"
+    },
+    "title": "Vindicator",
+    "description": "Health: 80\nSpeed: 0.45 BPS\nAbility: Can attack your allies",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "parent": "core:defense/mobs/silverfish",
+  "criteria": {
+    "impossible": {
+    "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+    "impossible"
+    ]
+  ]
+  }

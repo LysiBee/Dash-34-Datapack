@@ -1,0 +1,2 @@
+execute as @e[tag=random-block-marker1,limit=1,sort=random,tag=!placed-block] at @s run function core:memory/random/place_block {"block":"red_wool"}
+execute as @e[tag=random-block-marker1,limit=1,sort=random,tag=!placed-block] at @s run function core:memory/random/place_block {"block":"red_concrete_powder"}

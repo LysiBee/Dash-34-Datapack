@@ -1,0 +1,1 @@
+execute positioned -138 -51 -31 run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 1000000000000 0.5

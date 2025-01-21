@@ -1,0 +1,9 @@
+$item replace entity @p[gamemode=adventure] hotbar.0 from block 23 -60 -$(z) container.0
+$item replace entity @p[gamemode=adventure] hotbar.1 from block 23 -60 -$(z) container.1
+$item replace entity @p[gamemode=adventure] hotbar.2 from block 23 -60 -$(z) container.2
+$item replace entity @p[gamemode=adventure] hotbar.3 from block 23 -60 -$(z) container.3
+$item replace entity @p[gamemode=adventure] hotbar.4 from block 23 -60 -$(z) container.4
+$item replace entity @p[gamemode=adventure] hotbar.5 from block 23 -60 -$(z) container.5
+$item replace entity @p[gamemode=adventure] hotbar.6 from block 23 -60 -$(z) container.6
+$item replace entity @p[gamemode=adventure] hotbar.7 from block 23 -60 -$(z) container.7
+$item replace entity @p[gamemode=adventure] hotbar.8 from block 23 -60 -$(z) container.8

@@ -1,0 +1,77 @@
+Zombie
+Health: 10
+Speed: 0.2 BPS
+Ability: None
+zombie_head
+
+Skeleton
+Health: 20
+Speed: 0.4 BPS
+Ability: IDK
+skeleton_skull
+
+Creeper
+Health: 40
+Speed: 0.5 BPS
+Ability: Deals 10 extra damage to your base.
+creeper_head
+
+Spider
+Health: 20
+Speed: 0.4 BPS
+Ability: Has a chance to ignore traps placed
+spider_eye
+
+Witch
+Health: 40
+Speed: 0.35 BPS
+Ability: Heals nearby monsters in a small radius over time
+blaze_powder
+
+Husk
+Health: 50
+Speed: 0.4 BPS
+Ability: Deals 20 extra damage to your base
+rotten_flesh
+
+Stray
+Health: 50
+Speed: 0.5 BPS
+Ability: IDK
+arrow
+
+Piglin
+Health: 40
+Speed: 0.45 BPS
+Ability: Gives 30 extra gold upon death
+crossbow
+
+Blaze
+Health: 30
+Speed: 0.5 BPS
+Ability: Deals 30 extra damage to your base
+blaze_rod
+
+Silverfish
+Health: 3
+Speed: 0.35 BPS
+Ability: Randomly burrows into the ground.  When burrowed its still, cant be attacked, but gets regen.
+infested_stone
+
+Vindicator
+Health: 80
+Speed: 0.45 BPS
+Ability: Can attack your allies
+iron_axe
+
+Pillager
+Health: 30
+Speed: 0.5 BPS
+Ability: Can attack your allies
+crossbow
+
+Piglin Brute
+Health: 70
+Speed: 0.45 BPS
+Ability: Deals bonus damage to the base if it reaches it
+golden_axe

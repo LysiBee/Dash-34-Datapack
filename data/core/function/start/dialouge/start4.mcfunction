@@ -1,0 +1,2 @@
+tellraw @a {"text": "Remember, our researchers will be observing your every move, so don't be afraid to think outside the box and try unconventional approaches. And don't worry if you make mistakes - they're all part of the learning process.","color": "green"}
+schedule function core:start/dialouge/start5 16s

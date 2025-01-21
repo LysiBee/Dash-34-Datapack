@@ -1,0 +1,51 @@
+{
+    "description": "",
+    "supported_items": "minecraft:music_disc_11",
+    "weight": 1,
+    "max_level": 1,
+    "min_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "max_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "anvil_cost": 0,
+    "slots": [
+        "mainhand"
+    ],
+    "effects": {
+        "minecraft:tick": [
+            {
+                "effect": {
+                    "type": "minecraft:change_item_damage",
+                    "amount": -1
+                },
+                "requirements": {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "items.poison.damage": {
+                            "min": 1
+                        }
+                    }
+                }
+            }
+        ],
+        "minecraft:post_attack": [
+            {
+                "enchanted": "attacker",
+                "affected": "victim",
+                "effect": {
+                    "type": "minecraft:apply_mob_effect",
+                    "to_apply": "minecraft:poison",
+                    "min_duration": 3,
+                    "max_duration": 3,
+                    "min_amplifier": 0,
+                    "max_amplifier": 0
+                }
+            }
+        ]
+    }
+}

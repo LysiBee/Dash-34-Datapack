@@ -1,0 +1,2 @@
+tellraw @a {"text": "You've been selected to participate in our latest experiment, designed to test your mental and physical agility. Please note that your progress will be monitored and recorded throughout the facility. Don't worry, it's all perfectly safe... for now.","color": "green"}
+schedule function core:start/dialouge/start3 15s
