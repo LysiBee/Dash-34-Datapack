@@ -1,0 +1,1 @@
+execute as @e[tag=gear-marker] at @s run summon item ~ ~ ~ {Item:{id:"minecraft:chain",components:{custom_data:{gear:1b}}},NoGravity:true,Age:-1,PickupDelay:0s}

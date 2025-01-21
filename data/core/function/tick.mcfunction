@@ -89,12 +89,14 @@ execute as @e[type=minecraft:wind_charge] run schedule function core:parkour/win
 execute as @p[gamemode=adventure] at @s if block ~ ~ ~ polished_blackstone_pressure_plate run function core:parkour/checkpoint
 # Fail detect
 execute as @p[gamemode=adventure] at @s if block ~ ~-1.1 ~ minecraft:orange_stained_glass run function core:parkour/fail
-#title @a[tag=parkour-started,tag=!parkour-done] actionbar ["",{"text":"<<","bold":true,"color":"green"},{"score":{"name":"#timerminutes2","objective":"timer"},"bold":true,"color":"green"},{"text":":","bold":true,"color":"green"},{"score":{"name":"#timerseconds2","objective":"timer"},"bold":true,"color":"green"},{"text":">>","bold":true,"color":"green"}]
+title @a[tag=parkour-started,tag=!parkour-done] actionbar ["",{"text":"☠ ","color":"gold"},{"score":{"name":"$deaths","objective":"parkour"},"color":"gold"},{"text":" | 🔧 ","color":"gold"},{"score":{"name":"$gears","objective":"parkour"},"color":"gold"},{"text":" | ⌛ ","color":"gold"},{"score":{"name":"#timerminutes2","objective":"timer"},"color":"gold"},{"text":":","color":"gold"},{"score":{"name":"#timerseconds2","objective":"timer"},"color":"gold"}]
 # execute at @a run kill @e[type=minecraft:wind_charge,distance=50..]
 # Give night vision after first checkpoint
 effect give @a[tag=parkour-started,tag=!parkour-done] night_vision 1 0 true
 # Smoke particles around the pipes
 execute as @e[tag=pipe-marker] at @s run particle minecraft:smoke ~ ~ ~ 0.4 1 0.4 0 10 force
+# Gear pickup detect
+execute as @a if items entity @s hotbar.* *[custom_data~{gear:1b}] run function core:parkour/gears/collected
 
 
 
