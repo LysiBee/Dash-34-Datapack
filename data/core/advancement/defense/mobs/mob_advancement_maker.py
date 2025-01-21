@@ -1,4 +1,4 @@
-database =  open("Core Datapack\\data\\core\\advancement\\defense\\mobs\\Mobs Database.txt", "r")
+database =  open("Dash-34-Datapack\\data\\core\\advancement\\defense\\mobs\\Mobs Database.txt", "r")
 mobs = database.readlines()
 mob_dict = {}
 
@@ -22,7 +22,7 @@ while i < len(mobs):
 previous_mob = None
 for mob in mob_dict:
   parent = "core:defense/root" if previous_mob is None else f"core:defense/mobs/{previous_mob.lower()}"
-  current_mob_file = open(f"Core Datapack\\data\\core\\advancement\\defense\\mobs\\{mob.lower()}.json", "w")
+  current_mob_file = open(f"Dash-34-Datapack\\data\\core\\advancement\\defense\\mobs\\{mob.lower()}.json", "w")
   current_mob_file.write(f'''{{
   "display": {{
     "icon": {{
