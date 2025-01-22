@@ -1,6 +1,6 @@
 #Running custom per-step commands.
 
-particle minecraft:wax_on ~ ~ ~ .3 .3 .3 0 5 force
+particle minecraft:wax_off ~ ~ ~ .2 .2 .2 0.7 5 force
 
 #Check if an entity was detected.
 

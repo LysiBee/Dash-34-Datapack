@@ -44,10 +44,13 @@ execute as @e[tag=archer-skeleton] at @s anchored eyes positioned ~ -59 ~ unless
 execute as @e[tag=archer-skeleton] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
 execute as @e[tag=archer-skeleton] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 
+# Lightning
 execute as @e[tag=archer-lightning-marker] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
 execute as @e[tag=archer-lightning-marker] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 execute as @e[tag=archer-lightning-marker2] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
 execute as @e[tag=archer-lightning-marker2] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
+execute as @e[tag=archer-lightning-marker] at @s anchored eyes positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster]
+execute as @e[tag=archer-lightning-marker2] at @s anchored eyes positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster]
 # Base
 execute as @e[tag=archer-skellie1] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"100","damage":"5","range":"9.5"}
 # First Upgrade
