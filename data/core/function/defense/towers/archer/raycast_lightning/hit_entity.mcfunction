@@ -4,5 +4,5 @@ scoreboard players set #hit archercasttemp 1
 
 #Running custom commands since the entity was found.
 
-execute positioned ~ -70 ~ run summon lightning_bolt ~ ~ ~
+execute positioned ~ ~-10 ~ run summon lightning_bolt ~ ~ ~
 $damage @s $(damage) minecraft:lightning_bolt by @p

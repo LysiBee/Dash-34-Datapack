@@ -2,7 +2,7 @@
 # End of path
 execute as @e[tag=defense-monster] at @s if block ~ ~-0.1 ~ black_concrete run function core:defense/monsters/reached_end
 # Update health display
-execute as @e[tag=defense-monster] at @s if entity @n[tag=defense-start,distance=..0.1] run data modify entity @s HurtTime set value 10
+execute as @e[tag=defense-monster] at @s if entity @n[tag=defense-start,distance=..0.01] run data modify entity @s HurtTime set value 10
 # Determine Speed
 execute as @e[tag=defense-monster] unless score @s defense.speed matches 1.. store result score @s defense.speed run attribute @s attack_knockback base get
 # Move
@@ -63,3 +63,15 @@ execute as @e[tag=archer-skellie_final] if score @s defense.towers matches 1 run
 execute as @e[tag=archer-lightning-marker] if score @s defense.towers matches 1 run function core:defense/towers/archer/lightning {"cooldown":"50","damage":"7.5","range":"23.5"}
 # Lightning Upgrade 2
 execute as @e[tag=archer-lightning-marker2] if score @s defense.towers matches 1 run function core:defense/towers/archer/lightning {"cooldown":"35","damage":"15","range":"33.5"}
+
+# Elemental Tower
+execute as @e[tag=elemental] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
+execute as @e[tag=archer-skeleton] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
+# Base
+# Earth Ticking
+execute as @e[tag=elemental-spike] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
+execute as @e[tag=elemental-spike] if score @s defense.towers matches 6 run data merge entity @s {start_interpolation: -1, interpolation_duration:5,transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 2.5f, 1.0f], translation: [-0.5f, -0.5f, -0.5f]}}
+execute as @e[tag=elemental-spike] if score @s defense.towers matches 1 run kill @s
+# Ice Timer
+execute as @e[tag=defense-monster] if score @s defense.element.freeze_timer matches 1.. run scoreboard players remove @s defense.element.freeze_timer 1
+execute as @e[tag=defense-monster] if score @s defense.element.freeze_timer matches 1 run scoreboard players set @s defense.slowness 0

@@ -1,0 +1,1 @@
+$execute if entity @n[distance=..$(range),tag=defense-monster] run function core:defense/towers/element/fire/ignite {"damage":"$(damage)","ignite_time":"$(ignite_time)"}

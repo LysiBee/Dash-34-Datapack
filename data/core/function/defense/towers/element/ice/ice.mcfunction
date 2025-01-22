@@ -1,0 +1,1 @@
+$execute if entity @n[distance=..$(range),tag=defense-monster] run function core:defense/towers/element/ice/freeze {"damage":"$(damage)","freeze_time":"$(freeze_time)","freeze_power":"$(freeze_power)"}
