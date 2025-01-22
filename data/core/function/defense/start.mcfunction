@@ -1,0 +1,1 @@
+scoreboard players set $defense-started progress 1

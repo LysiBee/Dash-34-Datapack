@@ -22,6 +22,7 @@ scoreboard objectives add defense.towers dummy
 scoreboard objectives add defense.wave dummy
 scoreboard objectives add defense.display dummy
 scoreboard objectives add defense.rotation dummy
+scoreboard objectives add progress dummy
 team add defense_enemies
 bossbar add defense_health {"text":"REAMINING HEALTH","bold":true,"color":"aqua"}
 

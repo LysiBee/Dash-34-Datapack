@@ -1,3 +1,4 @@
+scoreboard players set $escape-started progress 1
 tag @p[gamemode=adventure] add escape-start
 recipe give @a core:trapdoor
 function core:escape/reset

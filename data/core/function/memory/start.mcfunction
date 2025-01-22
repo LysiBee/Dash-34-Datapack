@@ -1,3 +1,5 @@
+scoreboard players set $memory-started progress 1
+scoreboard players set $memory-started progress 0
 setblock 8 -55 -30 minecraft:redstone_block
 clone -8 -54 -33 -8 -56 -31 -7 -60 -33
 fill -8 -58 -33 -8 -60 -31 air

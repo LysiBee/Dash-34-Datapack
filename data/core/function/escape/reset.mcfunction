@@ -9,6 +9,7 @@ clone 19 -60 17 19 -60 17 17 -61 17
 clone 22 -60 3 16 -57 9 5 -60 0
 clone 19 -60 16 19 -60 16 13 -60 9
 clone 19 -60 15 19 -60 15 16 -58 11
+fill -1 -58 5 1 -60 5 minecraft:iron_block
 fill 4 -60 24 4 -59 24 minecraft:cobbled_deepslate_wall
 fill 15 -60 17 15 -59 17 minecraft:tuff_wall
 fill 8 -60 9 10 -60 9 air
