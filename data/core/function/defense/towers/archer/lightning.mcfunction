@@ -1,3 +1,2 @@
 $scoreboard players set @s defense.towers $(cooldown)
-$execute at @s positioned ~ -59 ~ at @n[distance=..$(range),tag=defense-monster] positioned ~ -70 ~ run summon lightning_bolt ~ ~ ~
-$execute at @s positioned ~ -59 ~ as @n[distance=..$(range),tag=defense-monster] run damage @s $(damage) minecraft:lightning_bolt by @p
+$execute at @s positioned ~ -59 ~ if entity @n[distance=..$(range),tag=defense-monster] at @s anchored eyes run function core:defense/towers/archer/raycast_lightning/start_ray {"damage":"$(damage)"}
