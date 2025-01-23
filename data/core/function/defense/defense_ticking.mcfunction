@@ -2,17 +2,7 @@
 execute as @p[gamemode=adventure] at @s if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"stepping_on":{"block":{"blocks":"minecraft:lime_terracotta"}}}} run effect give @s minecraft:jump_boost 1 4 false
 
 #    Monster Movement    #
-# End of path
-execute as @e[tag=defense-monster] at @s if block ~ ~-0.1 ~ black_concrete run function core:defense/monsters/reached_end
-# Update health display
-execute as @e[tag=defense-monster] at @s if entity @n[tag=defense-start,distance=..0.01] run data modify entity @s HurtTime set value 10
-# Determine Speed
-execute as @e[tag=defense-monster] unless score @s defense.speed matches 1.. store result score @s defense.speed run attribute @s attack_knockback base get
-# Move
-execute as @e[tag=defense-monster] at @s run function core:defense/monsters/movement/determine_speed
-# Intersection
-execute as @e[tag=defense-monster,tag=!chosen-path] at @s if block ~ ~-0.1 ~ ochre_froglight if entity @n[type=marker,tag=defense-intersection,distance=..0.1] run function core:defense/intersection/decide_turn
-execute as @e[tag=defense-monster,tag=chosen-path] at @s unless block ~ ~-0.1 ~ white_concrete run tag @s remove chosen-path
+execute as @e[tag=defense-monster] at @s run function core:defense/monsters/movement/movement_ticking
 #   Monster Abilities   #
 
 # Witch
@@ -71,7 +61,7 @@ execute as @e[tag=archer-lightning-marker2] if score @s defense.towers matches 1
 execute as @e[tag=element-center-marker] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
 execute as @e[tag=element-center-marker] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 # Base
-execute as @e[tag=element-center-marker] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activate {"fire_damage":"5","range":"100","ice_damage":"3","earth_damage":"5","wind_damage":"2","ignite_time":"60","freeze_time":"100","freeze_power":"10"}
+execute as @e[tag=element-center-marker] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activations/activate_base {"fire_damage":"5","range":"100","ice_damage":"3","earth_damage":"5","wind_damage":"2","ignite_time":"60","freeze_time":"100","freeze_power":"10","cooldown":"100"}
 # Earth Ticking
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 6 run data merge entity @s {start_interpolation: -1, interpolation_duration:5,transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 2.5f, 1.0f], translation: [-0.5f, -0.5f, -0.5f]}}

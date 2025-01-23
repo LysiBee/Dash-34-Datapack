@@ -1,3 +1,4 @@
+$scoreboard players set @s defense.towers $(cooldown)
 $scoreboard players set @s defense.slowness $(freeze_power)
 $scoreboard players set @s defense.element.freeze_timer $(freeze_time)
 $damage @s $(damage) freeze by @p
