@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-    "id": "minecraft:rotten_flesh"
+    "id": "minecraft:sand"
     },
     "title": "Husk",
     "description": "Health: 50\nSpeed: 0.4 BPS\nAbility: Deals 20 extra damage to your base",

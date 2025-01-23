@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-    "id": "minecraft:zombie_head"
+    "id": "minecraft:rotten_flesh"
     },
     "title": "Zombie",
     "description": "Health: 10\nSpeed: 0.2 BPS\nAbility: None",

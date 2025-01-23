@@ -1,10 +1,10 @@
 {
   "display": {
     "icon": {
-    "id": "minecraft:skeleton_skull"
+    "id": "minecraft:bone"
     },
     "title": "Skeleton",
-    "description": "Health: 20\nSpeed: 0.4 BPS\nAbility: IDK",
+    "description": "Health: 10\nSpeed: 0.4 BPS\nAbility: None",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

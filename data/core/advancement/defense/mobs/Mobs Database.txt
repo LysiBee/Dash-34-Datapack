@@ -2,24 +2,24 @@ Zombie
 Health: 10
 Speed: 0.2 BPS
 Ability: None
-zombie_head
+rotten_flesh
 
 Skeleton
-Health: 20
+Health: 10
 Speed: 0.4 BPS
-Ability: IDK
-skeleton_skull
+Ability: None
+bone
 
 Creeper
 Health: 40
 Speed: 0.5 BPS
-Ability: Deals 10 extra damage to your base.
-creeper_head
+Ability: Deals 10 extra damage to your base
+gunpowder
 
 Spider
-Health: 20
-Speed: 0.4 BPS
-Ability: Has a chance to ignore traps placed
+Health: 25
+Speed: 0.6 BPS
+Ability: None
 spider_eye
 
 Witch
@@ -32,13 +32,25 @@ Husk
 Health: 50
 Speed: 0.4 BPS
 Ability: Deals 20 extra damage to your base
-rotten_flesh
+sand
 
 Stray
 Health: 50
 Speed: 0.5 BPS
-Ability: IDK
-arrow
+Ability: Immune to ice related towers
+bow
+
+Zombie_Villager
+Health: 30
+Speed: 0.5 BPS
+Ability: Steals 10 gold upon death
+emerald
+
+Silverfish
+Health: 3
+Speed: 0.35 BPS
+Ability: Every 5-10 seconds, burrows into the ground.  When burrowed it can't move and cant be attacked, but gains regeneration
+infested_stone
 
 Piglin
 Health: 40
@@ -49,14 +61,26 @@ crossbow
 Blaze
 Health: 30
 Speed: 0.5 BPS
-Ability: Deals 30 extra damage to your base
+Ability: Deals 30 extra damage to your base; Immune to fire
 blaze_rod
 
-Silverfish
-Health: 3
-Speed: 0.35 BPS
-Ability: Randomly burrows into the ground.  When burrowed its still, cant be attacked, but gets regen.
-infested_stone
+Wither_Skeleton
+Health: 60
+Speed: 0.4 BPS
+Ability: When below half health, doubles in Speed
+stone_sword
+
+Enderman
+Health: 50
+Speed: 0.45 BPS
+Ability: Every 10 seconds, teleports to the nerest intersection
+ender_pearl
+
+Endermite
+Health: 20
+Speed: 1 BPS
+Ability: Has a %50 chance of spawning every time an enderman teleports
+purpur_block
 
 Vindicator
 Health: 80
@@ -65,13 +89,13 @@ Ability: Can attack your allies
 iron_axe
 
 Pillager
-Health: 30
+Health: 60
 Speed: 0.5 BPS
 Ability: Can attack your allies
 crossbow
 
-Piglin Brute
+Piglin_Brute
 Health: 70
 Speed: 0.45 BPS
-Ability: Deals bonus damage to the base if it reaches it
+Ability: Deals 50 extra damage to your base
 golden_axe

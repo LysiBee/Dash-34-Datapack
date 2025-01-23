@@ -4,7 +4,7 @@
     "id": "minecraft:crossbow"
     },
     "title": "Pillager",
-    "description": "Health: 30\nSpeed: 0.5 BPS\nAbility: Can attack your allies",
+    "description": "Health: 60\nSpeed: 0.5 BPS\nAbility: Can attack your allies",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

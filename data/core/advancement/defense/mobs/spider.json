@@ -4,7 +4,7 @@
     "id": "minecraft:spider_eye"
     },
     "title": "Spider",
-    "description": "Health: 20\nSpeed: 0.4 BPS\nAbility: Has a chance to ignore traps placed",
+    "description": "Health: 25\nSpeed: 0.6 BPS\nAbility: None",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

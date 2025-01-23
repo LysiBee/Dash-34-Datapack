@@ -9,7 +9,7 @@ def create_mcfunction_file():
 
     # Generate the command
     command = (
-        f"execute positioned -2 -59 146 run summon {mob} ~ ~ ~ "
+        f"execute positioned 4 -59 146 run summon {mob} ~ ~ ~ "
         f"{{CustomNameVisible:1b,Health:{health},NoAI:1b,Rotation:[90f,0.0f],Tags:[\"defense-monster\",\"cw_hp_disp\",\"defense-{mob}\",\"Entity-Dummy\"],"
         f"Team:defense_enemies,attributes:[{{id:\"max_health\",base:{health}}},"
         f"{{id:\"minecraft:attack_damage\",base:{bonus_damage}}},"
