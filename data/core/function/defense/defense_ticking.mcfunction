@@ -1,3 +1,6 @@
+# Secret 0_0
+execute as @p[gamemode=adventure] at @s if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"stepping_on":{"block":{"blocks":"minecraft:lime_terracotta"}}}} run effect give @s minecraft:jump_boost 1 4 false
+
 #    Monster Movement    #
 # End of path
 execute as @e[tag=defense-monster] at @s if block ~ ~-0.1 ~ black_concrete run function core:defense/monsters/reached_end
@@ -65,13 +68,15 @@ execute as @e[tag=archer-lightning-marker] if score @s defense.towers matches 1 
 execute as @e[tag=archer-lightning-marker2] if score @s defense.towers matches 1 run function core:defense/towers/archer/lightning {"cooldown":"35","damage":"15","range":"33.5"}
 
 # Elemental Tower
-execute as @e[tag=elemental] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
-execute as @e[tag=archer-skeleton] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
+execute as @e[tag=element-center-marker] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
+execute as @e[tag=element-center-marker] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 # Base
+execute as @e[tag=element-center-marker] if score @s defense.towers matches 1 at @s run function core:defense/towers/element/activate {"fire_damage":"5","range":"100","ice_damage":"3","earth_damage":"5","wind_damage":"2","ignite_time":"60","freeze_time":"100","freeze_power":"10"}
 # Earth Ticking
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 6 run data merge entity @s {start_interpolation: -1, interpolation_duration:5,transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 2.5f, 1.0f], translation: [-0.5f, -0.5f, -0.5f]}}
 execute as @e[tag=elemental-spike] if score @s defense.towers matches 1 run kill @s
 # Ice Timer
 execute as @e[tag=defense-monster] if score @s defense.element.freeze_timer matches 1.. run scoreboard players remove @s defense.element.freeze_timer 1
+execute as @e[tag=defense-monster] if score @s defense.element.freeze_timer matches 1.. at @s run particle snowflake ~ ~ ~ 0.2 1 0.2 0 5
 execute as @e[tag=defense-monster] if score @s defense.element.freeze_timer matches 1 run scoreboard players set @s defense.slowness 0

@@ -1,5 +1,0 @@
-execute store result score @s defense.element_random run random roll 1..100
-$execute if score @s defense.element_random matches 1..25 run function core:defense/towers/element/fire/fire {"damage":"$(damage)","ignite_time":"$(ignite_time)","range":"$(range)"}
-$execute if score @s defense.element_random matches 26..50 run function core:defense/towers/element/ice/ice {"damage":"$(damage)","ignite_time":"$(ignite_time)","range":"$(range)"}
-$execute if score @s defense.element_random matches 51..75 run function core:defense/towers/element/wind/wind {"damage":"$(damage)","ignite_time":"$(ignite_time)","range":"$(range)"}
-$execute if score @s defense.element_random matches 76..100 run function core:defense/towers/element/earth/earth {"damage":"$(damage)","ignite_time":"$(ignite_time)","range":"$(range)"}
