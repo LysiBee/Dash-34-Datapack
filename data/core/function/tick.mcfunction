@@ -3,8 +3,8 @@
 ###################
 effect give @p[gamemode=adventure,tag=!taking-damage] minecraft:saturation infinite 255 true
 effect give @p[gamemode=adventure,tag=!taking-damage] minecraft:resistance infinite 5 true
-execute as @e[tag=chair] if data entity @s interaction run function core:chair/mount_chair
-execute as @e[tag=chair] at @s if block ~ ~ ~ air run tp @s ~ ~-1 ~
+execute as @e[type=interaction,tag=chair] if data entity @s interaction run function core:chair/mount_chair
+execute as @e[type=interaction,tag=chair] at @s if block ~ ~ ~ air run tp @s ~ ~-1 ~
 execute as @e[type=item] at @s on origin run data modify entity @n[type=item,tag=!Text_Display] Owner set from entity @s UUID
 execute as @e[type=item,tag=!Text_Display] run data modify entity @s PickupDelay set value 0s
 execute as @e[type=item] at @s on origin run tp @n[type=item,tag=!Text_Display] @s
