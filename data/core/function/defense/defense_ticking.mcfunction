@@ -6,8 +6,8 @@ execute as @e[tag=defense-monster] at @s run function core:defense/monsters/move
 #   Monster Abilities   #
 
 # Witch
-execute as @e[tag=defense-monster,tag=defense-witch] at @s if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
-execute as @e[tag=defense-monster,tag=defense-witch] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/witch
+execute as @e[type=witch,tag=defense-witch] at @s if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
+execute as @e[type=witch,tag=defense-witch] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/witch
 item replace entity @e[type=witch] weapon with air
 
 # Piglin
@@ -15,12 +15,12 @@ execute as @a if score @s defense.kill_piglin matches 1.. run scoreboard players
 execute as @a if score @s defense.kill_piglin matches 1.. run scoreboard players reset @s defense.kill_piglin
 
 # Silverfish
-execute as @e[tag=defense-monster,tag=defense-silverfish] at @s if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
-execute as @e[tag=defense-monster,tag=defense-silverfish] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/silverfish
-execute as @e[tag=defense-monster,tag=defense-silverfish] at @s if score @s defense.abilities matches 100 run function core:defense/monsters/abilities/silverfish2
+execute as @e[type=silverfish,tag=defense-silverfish] at @s if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
+execute as @e[type=silverfish,tag=defense-monster,tag=defense-silverfish] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/silverfish
+execute as @e[type=silverfish,tag=defense-monster,tag=defense-silverfish] at @s if score @s defense.abilities matches 100 run function core:defense/monsters/abilities/silverfish2
 
-execute as @e[tag=defense-monster,tag=defense-enderman] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
-execute as @e[tag=defense-monster,tag=defense-enderman] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/enderman
+execute as @e[type=enderman,tag=defense-monster,tag=defense-enderman] if score @s defense.abilities matches 1.. run scoreboard players remove @s defense.abilities 1
+execute as @e[type=enderman,tag=defense-monster,tag=defense-enderman] at @s if score @s defense.abilities matches 1 run function core:defense/monsters/abilities/enderman
 
 
 # Kill detection for money
