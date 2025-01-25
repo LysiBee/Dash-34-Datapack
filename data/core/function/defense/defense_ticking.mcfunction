@@ -35,8 +35,9 @@ execute as @e[tag=tower-barrel-marker,type=marker,tag=!open] at @s if block ~ ~ 
 execute as @e[tag=tower-barrel-marker,type=minecraft:marker,tag=open] at @s if block ~ ~ ~ minecraft:barrel[open=false] run tag @s remove open
 # Archer Tower
 # All of them
-execute as @e[tag=archer-skeleton] at @s anchored eyes positioned ~ -59 ~ run rotate @s facing entity @n[tag=defense-monster,distance=..18.5]
-execute as @e[tag=archer-skeleton] at @s anchored eyes positioned ~ -59 ~ unless entity @n[tag=defense-monster,distance=..18.5] run rotate @s -180 0
+# //TODO probably add a type check for skeleton entity
+execute as @e[tag=archer-skeleton] at @s run rotate @s facing entity @n[tag=defense-monster,distance=..18.5] feet
+execute as @e[tag=archer-skeleton] at @s unless entity @n[tag=defense-monster,distance=..18.5] run rotate @s -180 0
 execute as @e[tag=archer-skeleton] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
 execute as @e[tag=archer-skeleton] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 
