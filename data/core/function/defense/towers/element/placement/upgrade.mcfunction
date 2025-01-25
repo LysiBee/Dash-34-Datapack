@@ -3,7 +3,7 @@ $data modify entity @n[tag=$(building)] data.x_offset set from entity @s data.x_
 $data modify entity @n[tag=$(building)] data.z_offset set from entity @s data.z_offset
 $data modify entity @n[tag=$(building)] data.rotation set from entity @s data.rotation
 kill @s
-kill @n[tag=tower-center-marker]
+kill @n[tag=element-center-marker]
 playsound block.anvil.use master @a ~ ~2 ~ 10 0.7
 particle minecraft:end_rod ~ ~2 ~ .2 .1 .2 0.5 50
 $clear @a *[custom_data~{element_upgrade$(building):1b}]
