@@ -47,7 +47,7 @@ Ability: Steals 10 gold upon death
 emerald
 
 Silverfish
-Health: 3
+Health: 20
 Speed: 0.35 BPS
 Ability: Every 5-10 seconds, burrows into the ground.  When burrowed it can't move and cant be attacked, but gains regeneration
 infested_stone

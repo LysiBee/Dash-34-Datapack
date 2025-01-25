@@ -18,6 +18,7 @@ scoreboard objectives add defense.damage dummy
 scoreboard objectives add defense.extra_damage dummy
 scoreboard objectives add defense.money dummy
 scoreboard objectives add defense.kill_piglin minecraft.killed:minecraft.piglin
+scoreboard objectives add defense.kill_villager minecraft.killed:minecraft.zombie_villager
 scoreboard objectives add defense.kill minecraft.custom:minecraft.mob_kills
 scoreboard objectives add archercasttemp dummy
 scoreboard objectives add defense.towers dummy
@@ -27,6 +28,7 @@ scoreboard objectives add defense.rotation dummy
 scoreboard objectives add defense.element_random dummy
 scoreboard objectives add progress dummy
 scoreboard objectives add defense.element.freeze_timer dummy
+scoreboard objectives add defense.movement dummy
 team add defense_enemies
 bossbar add defense_health {"text":"REAMINING HEALTH","bold":true,"color":"aqua"}
 
