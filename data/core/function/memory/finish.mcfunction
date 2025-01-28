@@ -1,5 +1,6 @@
 clear @p[gamemode=adventure]
 stopsound @a ambient minecraft:sound.custom.strad
+scoreboard players reset $1stmusic music
 tellraw @a ["",{"text":"You completed the memory puzzle with ","color":"green"},{"score":{"name":"#score","objective":"memory"},"color":"green"},{"text":" Points!","color":"green"}]
 execute if score #score memory matches 11..29 run playsound entity.experience_orb.pickup master @p[gamemode=adventure] ~ ~ ~ 10000000000000 2
 execute if score #score memory matches ..10 run advancement grant @p[gamemode=adventure] only core:memory/photographic_memory

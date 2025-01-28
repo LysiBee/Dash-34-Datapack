@@ -21,6 +21,8 @@ scoreboard objectives add defense.kill_piglin minecraft.killed:minecraft.piglin
 scoreboard objectives add defense.kill_villager minecraft.killed:minecraft.zombie_villager
 scoreboard objectives add defense.kill minecraft.custom:minecraft.mob_kills
 scoreboard objectives add archercasttemp dummy
+scoreboard objectives add defense.archer_slowness dummy
+scoreboard objectives add defense.archer_weakness dummy
 scoreboard objectives add defense.towers dummy
 scoreboard objectives add defense.wave dummy
 scoreboard objectives add defense.display dummy
