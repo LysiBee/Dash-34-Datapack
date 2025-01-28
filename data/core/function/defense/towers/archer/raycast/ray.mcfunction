@@ -1,12 +1,10 @@
-#Running custom per-step commands.
-
-particle minecraft:crit ~ ~ ~ .1 .1 .1 0 1 force
-
-#Check if an entity was detected.
-
-$execute if score #hit archercasttemp matches 0 positioned ~ ~ ~ as @e[tag=!archerray,dx=0,sort=nearest] run function core:defense/towers/archer/raycast/check_hit_entity {"damage":"$(damage)"}
+# Running custom per-step commands.
 scoreboard players add #distance archercasttemp 1
-
-#Advance forward and run the ray again if no entity and/or block was found.
-
-$execute if score #hit archercasttemp matches 0 if score #distance archercasttemp matches ..1000 positioned ^ ^ ^0.1 run function core:defense/towers/archer/raycast/ray {"damage":"$(damage)"}
+particle minecraft:crit ~ ~ ~ .1 .1 .1 0 0 force
+# Check if an entity was detected.
+$execute as @e[limit=1,dx=0,tag=!archerray,tag=defense-monster] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] positioned ~0.99 ~0.99 ~0.99 run function core:defense/towers/archer/raycast/check_hit_entity {"damage":"$(damage)"}
+# Advance forward and run the ray again if no entity and/or block was found.
+execute if score #hit archercasttemp matches 1.. run return fail
+execute if score #distance archercasttemp matches 1000.. run return fail
+#
+$execute positioned ^ ^ ^0.1 run function core:defense/towers/archer/raycast/ray {"damage":"$(damage)"}
