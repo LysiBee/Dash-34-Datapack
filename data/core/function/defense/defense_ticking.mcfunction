@@ -44,11 +44,11 @@ execute as @e[tag=archer-skeleton] at @s unless entity @n[tag=defense-monster,di
 execute as @e[tag=archer-skeleton] unless score @s defense.towers matches 1.. run scoreboard players set @s defense.towers 2
 execute as @e[tag=archer-skeleton] if score @s defense.towers matches 1.. run scoreboard players remove @s defense.towers 1
 # Witch/Wizard ticking
-execute as @e[tag=defense-monster,tag=!defense.weakened,nbt={active_effects:[{id:"minecraft:weakness",amplifier:0b}]}] run tag @s add defense.weakened
-execute as @e[tag=defense-monster,tag=defense.weakened,nbt=!{active_effects:[{id:"minecraft:weakness",amplifier:0b}]}] run tag @s remove defense.weakened
+execute as @e[tag=defense-monster,tag=!defense.slowed,nbt={active_effects:[{id:"minecraft:slowness",amplifier:0b}]}] run tag @s add defense.slowed
+execute as @e[tag=defense-monster,tag=defense.slowed,nbt=!{active_effects:[{id:"minecraft:slowness",amplifier:0b}]}] run tag @s remove defense.slowed
 
-execute as @e[tag=defense-monster,tag=!defense.weakened,nbt={active_effects:[{id:"minecraft:weakness",amplifier:1b}]}] run tag @s add defense.weakened
-execute as @e[tag=defense-monster,tag=defense.weakened,nbt=!{active_effects:[{id:"minecraft:weakness",amplifier:1b}]}] run tag @s remove defense.weakened
+execute as @e[tag=defense-monster,tag=!defense.weakened,nbt={active_effects:[{id:"minecraft:weakness"}]}] run tag @s add defense.weakened
+execute as @e[tag=defense-monster,tag=defense.weakened,nbt=!{active_effects:[{id:"minecraft:weakness"}]}] run tag @s remove defense.weakened
 
 
 # Base
@@ -56,9 +56,9 @@ execute as @e[tag=archer-skellie1] if score @s defense.towers matches 1 run func
 # First Upgrade
 execute as @e[tag=archer-skellie_castle] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"60","damage":"5","range":"11.5"}
 # Castle Upgrade 1
-execute as @e[tag=archer-skellie_castle2] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"50","damage":"10","range":"13.5"}
+execute as @e[tag=archer-skellie_castle2] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"50","damage":"10","range":"13.5"}
 # Castle Upgrade 2
-execute as @e[tag=archer-skellie_final] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot {"cooldown":"30","damage":"20","range":"18.5"}
+execute as @e[tag=archer-skellie_final] if score @s defense.towers matches 1 run function core:defense/towers/archer/shoot_multishot {"cooldown":"30","damage":"20","range":"18.5"}
 # Witch Upgrade 1
 execute as @e[tag=archer-skellie_witch2] if score @s defense.towers matches 1 run function core:defense/towers/archer/potion {"cooldown":"60","damage":"8","range":"18.5"}
 # Witch Upgrade 2
