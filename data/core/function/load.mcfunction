@@ -31,6 +31,9 @@ scoreboard objectives add defense.element_random dummy
 scoreboard objectives add progress dummy
 scoreboard objectives add defense.element.freeze_timer dummy
 scoreboard objectives add defense.movement dummy
+scoreboard objectives add defense.distance dummy
+scoreboard objectives add defense.targetx dummy
+scoreboard objectives add defense.targetz dummy
 team add defense_enemies
 bossbar add defense_health {"text":"REAMINING HEALTH","bold":true,"color":"aqua"}
 

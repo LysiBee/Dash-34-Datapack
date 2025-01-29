@@ -4,10 +4,10 @@ $data modify entity @n[tag=$(building)] data.z_offset set from entity @s data.z_
 $data modify entity @n[tag=$(building)] data.rotation set from entity @s data.rotation
 kill @s
 kill @n[tag=tower-center-marker]
-$tag @n[tag=archer-skellie$(building)] add dead-skellie
+tag @n[tag=archer-skeleton] add dead-skellie
 execute as @n[tag=dead-skellie] at @s run tp @s ~ ~-300 ~
 execute as @n[tag=dead-skellie] at @s run kill @s
 playsound block.anvil.use master @a ~ ~2 ~ 10 0.7
 particle minecraft:end_rod ~ ~2 ~ .2 .1 .2 0.5 50
-$clear @a *[custom_data~{archer_upgrade$(building):1b}]
 kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{tower_upgrade:1b}}}}]
+clear @a *[custom_data={tower_upgrade:1b}:1b}]
