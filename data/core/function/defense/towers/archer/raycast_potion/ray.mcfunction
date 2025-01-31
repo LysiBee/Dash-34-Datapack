@@ -1,6 +1,6 @@
 #Running custom per-step commands.
 
-particle minecraft:witch ~ ~ ~ .2 .2 .2 0.7 3 force
+particle minecraft:witch ~ ~ ~ .1 .1 .1 0.7 1 force
 
 #Check if an entity was detected.
 

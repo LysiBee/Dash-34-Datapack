@@ -19,6 +19,8 @@ $execute if items entity @s $(slot) *[custom_data~{element_upgrade_ice2:1b}] as 
 $execute if items entity @s $(slot) *[custom_data~{element_upgrade_earth1:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_earth1","cost":"100","item_slot":"11","slot_to_replace":"16"}
 $execute if items entity @s $(slot) *[custom_data~{element_upgrade_earth2:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/placement/get_rotation {"building":"_earth2","cost":"350","item_slot":"12","slot_to_replace":"13"}
 
+$execute if items entity @s $(slot) *[custom_data~{element_sell:1b}] as @n[tag=tower-barrel-marker] at @n[tag=element-center-marker] run function core:defense/towers/element/sell
+
 # TENT UPGRADES
 $execute if items entity @s $(slot) *[custom_data~{tent_upgrade1:1b}] run function core:defense/towers/tent/placement/upgrade {"building":"1"}
 $execute if items entity @s $(slot) *[custom_data~{tent_upgrade_camp:1b}] run function core:defense/towers/tent/placement/upgrade {"building":"_camp"}

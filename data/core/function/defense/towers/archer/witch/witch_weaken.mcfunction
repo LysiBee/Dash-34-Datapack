@@ -1,0 +1,1 @@
+execute store result storage core:witch_slowness current_damage int 0.01 run scoreboard players get @s defense.damage

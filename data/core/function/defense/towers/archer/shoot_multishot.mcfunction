@@ -13,6 +13,9 @@ $execute at @s positioned ~ -59 ~ as @e[tag=defense-monster,distance=..$(range),
 $execute at @s positioned ~ -59 ~ as @e[tag=defense-monster,distance=..$(range),tag=!defense-target] if score @s defense.distance = $max defense.distance run tag @s add defense-target
 
 $execute at @s anchored eyes positioned ^ ^ ^ facing entity @n[tag=defense-monster,tag=defense-target] feet run function core:defense/towers/archer/raycast/start_ray {"damage":"$(damage)"}
+execute at @s anchored eyes positioned ^ ^ ^ run rotate @s facing entity @n[tag=defense-monster,tag=defense-target]
 $execute at @s anchored eyes positioned ^ ^ ^ facing entity @n[tag=defense-monster,tag=defense-target] feet run function core:defense/towers/archer/raycast/start_ray {"damage":"$(damage)"}
+execute at @s anchored eyes positioned ^ ^ ^ run rotate @s facing entity @n[tag=defense-monster,tag=defense-target]
 $execute at @s anchored eyes positioned ^ ^ ^ facing entity @n[tag=defense-monster,tag=defense-target] feet run function core:defense/towers/archer/raycast/start_ray {"damage":"$(damage)"}
-playsound minecraft:item.crossbow.shoot master @a ~ ~ ~ 2
+execute at @s anchored eyes positioned ^ ^ ^ run rotate @s facing entity @n[tag=defense-monster,tag=defense-target]
+execute at @s run playsound minecraft:item.crossbow.shoot master @a ~ ~ ~ 2

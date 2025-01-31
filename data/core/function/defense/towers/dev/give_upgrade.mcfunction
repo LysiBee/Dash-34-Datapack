@@ -1,0 +1,1 @@
+$item replace entity @s weapon.mainhand from block -1 -43 0 container.$(slot)
